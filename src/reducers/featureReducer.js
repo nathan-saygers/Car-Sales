@@ -36,7 +36,7 @@ export const featureReducer = (state = initialState, action) => {
     }
 
     case REMOVE_FEATURE: 
-    console.log('are you getting this from remove')
+    console.log('are you getting this from remove', action)
       let removedCarFeatures = state.car.features.filter(feature => feature.id !== action.payload.id);
       let removedAdditionalFeatures = state.additionalFeatures.map(feature => {
         return feature;
